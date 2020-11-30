@@ -6,7 +6,7 @@ let context: BrowserContext
 let page: Page
 
 const webappUrl = `http://${process.env.WEBAPP_HOSTNAME}` 
-const greeting = `Hello ${process.env.GREETING || 'unknown'}!` 
+const greeting =  'Hello kubed'//`Hello ${process.env.GREETING || 'unknown'}!` 
 
 
 describe('Webapp', () => {
@@ -24,9 +24,6 @@ describe('Webapp', () => {
   })
   
   it('should display the correct message', async () => {
-
-    
-    
     await page.goto(webappUrl);
     
     const preElement = await page.waitForSelector('//body/p')
